@@ -1,0 +1,41 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Dashboard
+  link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' integrity='sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN' crossorigin='anonymous')
+  link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css' integrity='sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk' crossorigin='anonymous')
+ 
+  style.
+    .pt-3-half {
+    padding-top: 1.4rem;
+    }
+.card
+  h3.card-header.text-center.font-weight-bold.text-uppercase.py-4 Dashboard
+  .card-body
+    #table.table-editable
+      span.table-add.float-right.mb-3.mr-2
+        a.text-success(href='#!')
+          i.fa.fa-plus.fa-2x(aria-hidden='true')
+      table.table.table-bordered.table-responsive-md.table-striped.text-center
+        thead
+          tr
+            th.text-center first Name
+            th.text-center last name
+            th.text-center email
+            th.text-center Edit
+            th.text-center Remove
+        tbody
+        for item in data
+            tr
+                td.pt-3-half(contenteditable='true')= item.firstname
+                td.pt-3-half(contenteditable='true')=item.lastname
+                td.pt-3-half(contenteditable='true')=item.email
+               
+                td.pt-3-half
+                     span.table-remove
+                        button.btn.btn-success.btn-rounded.btn-sm.my-0(type='button') Update  
+                td
+                    span.table-remove
+                        button.btn.btn-danger.btn-rounded.btn-sm.my-0(type='button') Remove
+                // This is our clonable table line
